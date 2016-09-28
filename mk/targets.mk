@@ -67,6 +67,10 @@ erlebrain2: TOOLCHAIN = RPI
 erlebrain2: BUILDSYS_DEPRECATED  = 1
 erlebrain2: all
 
+yufly: HAL_BOARD = HAL_BOARD_LINUX
+yufly: TOOLCHAIN = RPI
+yufly: all
+
 bbbmini: HAL_BOARD = HAL_BOARD_LINUX
 bbbmini: TOOLCHAIN = BBONE
 bbbmini: BUILDSYS_DEPRECATED  = 1
