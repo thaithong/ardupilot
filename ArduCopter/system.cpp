@@ -110,6 +110,15 @@ void Copter::init_ardupilot()
     // load parameters from EEPROM
     load_parameters();
 
+#if HIL_SUPPORT
+    if (g.hil_mode == 1) {
+        // set sensors to HIL mode
+        ins.set_hil_mode();
+        compass.set_hil_mode();
+        barometer.set_hil_mode();
+    }
+#endif
+
     GCS_MAVLINK::set_dataflash(&DataFlash);
 
     // initialise serial ports
