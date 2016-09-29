@@ -381,6 +381,9 @@ public:
 #if CLI_ENABLED == ENABLED
     AP_Int8         cli_enabled;
 #endif
+#if HIL_SUPPORT
+    AP_Int8  hil_mode;
+#endif
 
     AP_Float        throttle_filt;
     AP_Int16        throttle_behavior;
